@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700?family=Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<script src="js/js.js"></script>
+</head>
+<body>
+	<h1>Pomodoro Clock</h1>
+	<p class="signature">Coded by Evan Slaton</p>
+	
+	<div class="container">
+		<div class="columns">
+			<p class="time"><span id="main-time-mins">00</span>&#58;<span id="main-time-sec" class="red">00</span>
+			</p>
+			<p id="timer-label" class="timer-label">Session</p>
+		
+			<button id="start" class="countdown-buttons">Start</button>
+			<button id="stop" class="countdown-buttons">Stop</button>
+			<button id="reset" class="countdown-buttons">Reset</button>		
+		</div>
+
+		<div class="columns margin-top">
+			<div id="session" class="set-timer-section">
+				<div class="time-centerer">
+					<p class="set-timer">Session</p>
+					<p id="sessionTime" class="time inline-block">25</p>
+				</div>
+				<div class="absolute">
+					<button class="inline-block add-time">&#43;</button>
+					<button class="inline-block subtract-time">&#45;</button>
+				</div>
+			</div>
+
+			<div id="break" class="set-timer-section margin-top2">
+				<div class="time-centerer">
+					<p class="set-timer">Break</p>
+					<p id="breakTime" class="time inline-block">5</p>
+				</div>
+				<div class="absolute">
+					<button class="inline-block add-time">&#43;</button>
+					<button class="inline-block subtract-time">&#45;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

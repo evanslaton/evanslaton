@@ -1,0 +1,59 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+div.container {
+	max-width: 1200px;
+	height: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding-top: 30px;
+	background-color: grey;
+	background-image: url(../images/swanson.jpg);
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+div.quotes {
+	width: 70%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 5px black;
+	font-size: 1.3em;
+}
+
+h1 {
+	margin: 0 0 10% 0;
+	font-size: 2em;
+	line-height: .75em;
+}
+
+p {
+	font-family: Arial, sans-serif;
+}
+
+button {
+	border-radius: 10px;
+	margin: 15% auto 0 auto;
+	width: 10em;
+	padding: 10px;
+	font-size: 1.2em;
+	color: white;
+	background: grey;
+	background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+	text-shadow: 1px 1px 1px black;
+	position: absolute;
+	bottom: 10%;
+	right: 0;
+	left: 0;
+}

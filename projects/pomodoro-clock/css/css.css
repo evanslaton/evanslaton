@@ -1,0 +1,210 @@
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	text-align: center;
+	background-color: #293852;
+	color: #59A2EE;
+	height: 100%;
+	font-family: 'Fjalla One', sans-serif;
+	position: relative;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1 {
+	background-color: #5DBF89;
+	color: #293852;
+	text-transform: uppercase;
+	padding: 25px 0 45px;
+	margin-top: 30px;
+}
+
+.signature {
+	clear: both;
+	padding-top: 100px;
+	color: #293852;
+	position: absolute;
+	top: -30px;
+	left: 0;
+	right: 0;
+}
+
+div.columns {
+	width: 50%;
+	float: left;
+	margin-top: 120px;
+}
+
+p {
+	margin: 0;
+}
+
+.time {
+	font-family: Inconsolata, monospace;
+	font-size: 72px;
+}
+
+.red {
+	color: #753940;
+}
+
+.timer-label {
+	border: 2px solid #59A2EE;
+	margin: 5px auto 20px;
+	max-width: 350px;
+	font-size: 32px;
+	padding: 10px 0;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+button {
+	background-color: #5DBF89;
+	color: #293852;
+	border: 1px solid #5DBF89;
+	border-radius: 5px;
+	margin: 0 10px;
+	font-size: 24px;
+	padding: 8px 25px;
+}
+
+.countdown-buttons {
+	width: 100px;
+	padding: 8px 0;
+	text-align: center;
+}
+
+.margin-top {
+	margin-top: 100px !important;
+  padding-bottom: 50px;
+}
+
+.set-timer-section {
+	position: relative;
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+button.inline-block {
+	width: 65px;
+	padding: 8px 0;
+	text-align: center;
+}
+
+.time-centerer {
+	width: 75px;
+	margin-left: 75px;
+	text-align: center;
+}
+
+p.set-timer {
+	font-size: 24px;
+	width: 100%;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.absolute {
+	position: absolute;
+	top: 43%;
+	right: 0;
+}
+
+.margin-top2 {
+	margin-top: 65px;
+}
+
+@media screen and (max-width: 753px) {
+	div.columns {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.margin-top {
+		margin-top: 20px !important;
+	}
+
+	.margin-top2 {
+		margin-top: 25px;
+	}
+
+	.time-centerer {
+		width: 75px;
+		margin-left: 25px;
+		text-align: center;
+	}
+
+	.absolute {
+		right: 25px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	div.columns {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.countdown-buttons {
+		display: block;
+		margin: 10px auto 0;
+		width: 350px;
+		font-size: 24px;
+		padding: 8px 0;
+		text-align: center;
+	}
+
+	.absolute {
+		right: 0;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.time-centerer {
+		width: 100%;
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.absolute {
+		position: relative;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.timer-label {
+		width: 90%;
+	}
+
+	.countdown-buttons {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.absolute {
+		position: relative;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 333px) {
+	.signature {
+		position: absolute;
+		top: 9px;
+	}
+}

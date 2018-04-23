@@ -1,0 +1,179 @@
+/*CSS RESET*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/*Heading Styles*/
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgb(69, 58, 125);
+	box-shadow: 1px 1px 3px black;
+}
+
+header img {
+	display: inline-block;
+	padding: 10px 15px;
+	width: 94px;
+	height: 32px;
+}
+
+/*Main Content Styles*/
+div.container {
+	width: 80%;
+	max-width: 1000px;
+	margin: 70px auto 20px auto;
+}
+
+h2 {
+	background-color: darkgrey;
+	color: white;
+	font-size: 1.3em;
+	text-shadow: 1px 1px 5px black;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 3px black;
+}
+
+div.streamers {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid grey;
+	overflow: hidden;
+}
+
+div.container img {
+	display: inline-block;
+	border: 1px solid grey;
+	width: 100%;
+	height: auto;
+	max-width: 280px;
+	max-height: 156px;
+	margin: 5px 10px 5px 0;
+	float: left;
+}
+
+div.container p {
+	margin-top: 3px;
+	font-size: .75em;
+}
+
+div.container p span.bold {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+div.container p.justified {
+	text-align: justify;
+}
+
+/*Footer Styles*/
+footer {
+	clear: both;
+	text-align: center;
+	width: 100%;
+	padding: 20px 0;
+	margin-bottom: 30px;
+	background-color:;
+	background-image: url(../images/splash.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-top: 1px solid rgb(227, 225, 232);
+	border-bottom: 1px solid rgb(227, 225, 232);
+}
+
+footer h3 {
+	font-size: 2rem;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+footer ul li {
+	display: inline-block;
+	box-sizing: border-box;
+	color: white;
+	font-weight: 400;
+	background-color: rgb(69, 58, 125);
+	padding: 10px 15px;
+	margin: .1% .1%;
+}
+
+footer ul a li:hover {
+	background: rgb(108, 95, 173);
+	transition: background .12s ease-in, color .12s ease-in, box-shadow .12s ease-in;
+}
+
+p.credit {
+	text-align: center;
+	font-size: .75em;
+	margin-bottom: 30px;
+}
+
+@media screen and (max-width: 650px) {
+
+	div.container img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-width: 280px;
+		max-height: 156px;
+		margin: 5px auto;
+		float: none;
+	}
+
+	div.streamers {
+		max-width: 280px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

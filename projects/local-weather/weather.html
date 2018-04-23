@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Local Weather</title>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<h1>Local Weather</h1>
+
+		<ul class="weather">
+			<li><img id="image" src="http://via.placeholder.com/1x1" alt="weather icon" /></li>
+			<div id="change" class="inline"><li><span id="temp">&#45;</span>&deg;</li>
+			<li id="temp-unit">F</li></div>
+		</ul>
+
+		<div class="row extra">
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<p id="location">&#45;</p>
+			</div>
+
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<p id="description">&#45;</p>
+			</div>
+
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<p>humidity&#58; <span id="humidity">&#45;</span>&#37;</p>
+			</div>
+		</div>
+
+		<div class="storm-div">
+			<img class="storm" src="images/storm.png" alt="Storm from The X-Men" />
+		</div>
+	</div>
+
+	<script>
+	window.onload = function() {
+		
+		//Variable declarations
+		var api = "https://fcc-weather-api.glitch.me/api/current?"
+		var jsonData;
+		var weatherIcon;
+		var lat;
+		var lon;
+
+		//Retreives user's time
+		var now = new Date();
+
+		//Retrieves user's location
+	    if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(showPosition);
+	  	};
+
+	  	//Gets JSON data and updates HTML
+	    function showPosition(position) {
+	        lat = "lat=" + position.coords.latitude; 
+	        lon = "&lon=" + position.coords.longitude;
+
+			$.getJSON(api + lat + lon, function(data){
+	   			jsonData = data;
+
+	   			//Determines if it's currently day or night and does a lot of stuff to get the right icon
+	   			if (now.getHours() > 7 && now.getHours() < 19) {
+
+		   			if (jsonData.weather[0].id > 199 && jsonData.weather[0].id < 232) {
+		   				weatherIcon = "11d";
+		   			} else if (jsonData.weather[0].id > 299 && jsonData.weather[0].id < 322) {
+		   				weatherIcon = "09d";
+		   			} else if (jsonData.weather[0].id == 511) {
+		   				weatherIcon = "13d";
+		   			} else if (jsonData.weather[0].id > 499 && jsonData.weather[0].id < 505) {
+		   				weatherIcon = "09d";
+		   			} else if (jsonData.weather[0].id > 510 && jsonData.weather[0].id < 532) {
+		   				weatherIcon = "09d";
+		   			} else if (jsonData.weather[0].id > 599 && jsonData.weather[0].id < 623) {
+		   				weatherIcon = "13d";
+		   			} else if (jsonData.weather[0].id > 700 && jsonData.weather[0].id < 782) {
+		   				weatherIcon = "50d";
+		   			} else if (jsonData.weather[0].id == 800) {
+		   				weatherIcon = "01d";
+		   			} else if (jsonData.weather[0].id == 801) {
+		   				weatherIcon = "02d";
+		   			} else if (jsonData.weather[0].id == 802) {
+		   				weatherIcon = "03d";
+		   			} else if (jsonData.weather[0].id == 803 || jsonData.weather[0].id == 804) {
+		   				weatherIcon = "04d";
+		   			}
+		   		} else {
+		   			if (jsonData.weather[0].id > 199 && jsonData.weather[0].id < 232) {
+		   				weatherIcon = "11n";
+		   			} else if (jsonData.weather[0].id > 299 && jsonData.weather[0].id < 322) {
+		   				weatherIcon = "09n";
+		   			} else if (jsonData.weather[0].id == 511) {
+		   				weatherIcon = "13n";
+		   			} else if (jsonData.weather[0].id > 499 && jsonData.weather[0].id < 505) {
+		   				weatherIcon = "09n";
+		   			} else if (jsonData.weather[0].id > 510 && jsonData.weather[0].id < 532) {
+		   				weatherIcon = "09n";
+		   			} else if (jsonData.weather[0].id > 599 && jsonData.weather[0].id < 623) {
+		   				weatherIcon = "13n";
+		   			} else if (jsonData.weather[0].id > 700 && jsonData.weather[0].id < 782) {
+		   				weatherIcon = "50n";
+		   			} else if (jsonData.weather[0].id == 800) {
+		   				weatherIcon = "01n";
+		   			} else if (jsonData.weather[0].id == 801) {
+		   				weatherIcon = "02n";
+		   			} else if (jsonData.weather[0].id == 802) {
+		   				weatherIcon = "03n";
+		   			} else if (jsonData.weather[0].id == 803 || jsonData.weather[0].id == 804) {
+		   				weatherIcon = "04n";
+		   			}
+		   		};
+		
+				//Creates the url to the appropriate icon
+				var weatherIconUrl = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
+
+				//Switches in the user-specific weather data
+	   			document.getElementById("image").src = weatherIconUrl;
+	   			document.getElementById("temp").innerHTML = Math.round(((jsonData.main.temp * 9) / 5) + 32);
+	   			document.getElementById("location").innerHTML = jsonData.name;
+	   			document.getElementById("description").innerHTML = jsonData.weather[0].description;
+	   			document.getElementById("humidity").innerHTML = Math.round(jsonData.main.humidity);
+	  		});
+  		};
+
+  		//Event listener to change between units of temperature
+		document.getElementById("change").addEventListener("click", changeUnit, false);
+
+  		function changeUnit() {
+  			var element = document.getElementById('temp-unit');
+  			var otherElement = document.getElementById('temp')
+  			if (element.innerHTML == "F") {
+  				element.innerHTML = "C";
+  				otherElement.innerHTML = Math.round(jsonData.main.temp);
+  			} else {
+  				element.innerHTML = "F";
+  				otherElement.innerHTML = Math.round(((jsonData.main.temp * 9) / 5) + 32);
+  			}
+  		};
+
+	    /*var myRequest = new XMLHttpRequest();
+	    myRequest.open('GET', url);
+
+	    myRequest.onload = function() {
+	    	a.innerHTML = ourRequest.responseText;
+	    };
+
+	    myRequest.send();*/
+	};
+	</script>
+
+
+</body>
+</html>

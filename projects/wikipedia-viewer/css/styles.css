@@ -1,0 +1,164 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: azure;
+	font-size: 1.25em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div.container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 30px 0 0 0;
+}
+
+/* Header */
+header {
+	width: 100%;
+	min-width: 230px;
+	background-color: rgb(128, 128, 128);
+	background-color: rgba(128, 128, 128, .50);
+	border: 1px solid DarkSlateGray;
+	border-radius: 10px;
+	box-shadow: 0 0 5px black;
+	box-sizing: border-box;
+}
+
+header h1 img {
+	width: 45px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+h1 {
+	padding: 20px 10px;
+	text-shadow: 1px 1px 5px black;
+	text-align: left;
+	font-size: 2em;
+	color: white;
+}
+
+/* Left Column */
+div.left-column {
+	width: 35%;
+	min-width: 185px;
+	float: left;
+	margin-top: 30px;
+}
+
+div.random-article {
+	text-align: center;
+	font-size: 1.1em;
+	width: 95%;
+	max-width: 330px;
+	min-width: 150px;
+	height: 40px;
+	margin: 10px 0;
+	padding: 7px;
+	background-color: white;
+	border-radius: 500px;
+	background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+	border: 1px solid black;
+	box-shadow: 0 0 3px DarkSlateGray;
+	box-sizing: border-box;
+}
+
+div.random-article:hover {
+	background-color: white !important;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+div.random-article:hover {
+	cursor: pointer;
+}
+
+div.random-article:active {
+	box-shadow: none;
+}
+
+input {
+	display: block;
+	width: 95%;
+	max-width: 330px;
+	min-width: 150px;
+	height: 40px;
+	margin: 30px 0;
+	border: 1px solid black;
+	border-radius: 500px;
+	padding: 10px;
+	box-shadow: 0 0 3px DarkSlateGray;
+	font-style: italic;
+	font-size: .75em;
+}
+
+input:focus {
+	outline: none;
+}
+
+/* Right Column */
+div.right-column {
+	width: 65%;
+	float: left;
+	box-sizing: border-box;
+}
+
+div.article {
+	border-bottom: 1px solid DarkSlateGray;
+	margin-top: 35px;
+	padding-bottom: 35px;
+}
+
+div.article:hover {
+	color: red;
+}
+
+h2 {
+	color: black;
+	padding: 0 0 0 7px;
+}
+
+p {
+	color: black;
+	font-size: .8em;
+	padding: 0 0 0 7px;
+	margin: 15px 0 0 0;
+}
+
+footer {
+	clear: both;
+}
+
+@media screen and (max-width: 750px) {
+
+	div.left-column {
+		float: none;
+		width: 100%;
+		margin: 20px auto 0 auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	input, div.random-article {
+		margin: 20px auto 0 auto;
+		width: 100%;
+	}
+
+	div.right-column {
+		float: none;
+		width: 100%;
+	}
+
+	h2 {
+		text-align: center;
+	}
+}

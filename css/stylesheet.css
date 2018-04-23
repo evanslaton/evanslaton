@@ -1,0 +1,513 @@
+* {
+	font-family: Quicksand, sans-serif;
+}
+
+nav.navbar {
+	background-color: transparent !important;
+}
+
+nav.navbar li {
+	margin: 0 0;
+}
+
+nav.navbar .navbar-brand {
+	font-size: 20px;
+}
+
+nav.navbar a {
+	color: #FFF !important;
+	font-size: 18px;
+}
+
+div.banner {
+	width: 100%;
+	height: 400px;
+	background-image: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+div.blue-film {
+	background-color: rgba(88, 130, 163, .3);
+	height: 100%;
+}
+
+div.intro i {
+	color: #444545;
+}
+
+div.grey-background {
+	background-color: #EDEDEE;
+	color: #000;
+	margin: 15px 0 0;
+	padding-top: 1px;
+}
+
+div.top-bottom-padding {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+div.skills-row {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+div.side-padding {
+	padding: 30px 20px;
+}
+
+div.about-row {
+	margin-top: 20px;
+}
+
+div.about-socmed-div-small {
+	display: inline;
+}
+
+div.about-socmed-div-big {
+	display: none;
+}
+
+div.my-work {
+	margin-top: 15px;
+	padding: 15px 10px;
+	width: 100%;
+}
+
+div.work-row {
+	margin-top: 20px;
+}
+
+div.my-work img {
+	box-shadow: 2px 2px 5px #000;
+}
+
+div.project-container {
+	padding: 30px 15px;
+}
+
+div.project-row {
+	margin-top: 20px;
+}
+
+div.my-pic {
+	padding: 0;
+}
+
+div.contact-row {
+	margin-top: 20px;
+}
+
+div.footer-socmed-div {
+	margin-top: 10px;
+}
+
+div.banner-buttons-div {
+	position: absolute;
+/*	top: 25%;*/
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.big-screen {
+	display: none;
+}
+
+div.banner h1 {
+	color: #FFF;
+	font-family: sans-serif;
+	text-shadow: 2px 2px 5px #000;
+	font-size: 26px;
+	position: absolute;
+	top: 170px;
+	left: 0;
+	right: 0;
+}
+
+div.banner h1.homepage {
+	display: none;
+}
+
+h2 {
+	font-family: Voces, sans-serif;	
+}
+
+h2.homepage-about {
+	margin: 20px 0;
+}
+
+h2.portfolio-title {
+	margin-top: 50px;
+}
+
+h3 {
+	margin-top: 40px;
+}
+
+div.intro h2 {
+	margin-top: 20px;
+}
+
+div.about-row h2 {
+	margin-top: 20px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+p {
+	font-size: 18px;
+}
+
+p.projects-p {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+p.intro-text {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0 10px;
+}
+
+p.skills {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #5882A3;
+	padding: 0;
+	margin: 10px 0 0;
+}
+
+p.about-text {
+	margin-top: 20px;
+}
+
+p.work-text {
+	margin: 20px 0 20px;
+}
+
+p.company-name {
+	border-bottom: 1px solid grey;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+p.title {
+	margin-bottom: 0;
+}
+
+p.education {
+	margin-bottom: 0;
+}
+
+div.banner a.banner-buttons {
+	color: #FFF;
+	text-align: center;
+	text-shadow: 1px 1px 2px #000;
+	border: 1px solid #FFF;
+	padding: 10px 20px;
+	width: 100%;
+	max-width: 200px;
+	display: inline-block;
+	margin: 5px auto;
+	background-color: rgba(88, 130, 163, .6);
+	box-shadow: 1px 1px 3px #000;
+	border-radius: 5px;
+	position: absolute;
+	top: 220px;
+	left: 0;
+	right: 0;
+}
+
+nav a {
+	text-shadow: 1px 1px 3px #000;
+}
+
+div.banner a.banner-buttons:hover {
+	color: #FFF;
+	box-shadow: 2px 2px 3px #000;
+}
+
+div.banner a.banner-buttons:active {
+	color: #FFF;
+	box-shadow: 1px 1px 3px #000;
+}
+
+div.banner a.banner-resume {
+	top: 275px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+a.about-link {
+	font-style: italic;
+	color: #000;
+}
+
+a.visit-website {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	padding: 10px 0;
+	margin: 30px auto 50px;
+	border-radius: 10px;
+	background-color: #5882A3;
+	color: #FFF;
+	text-decoration: none;
+	box-shadow: 2px 2px 2px #062F4F;
+}
+
+a.visit-website:active {
+	box-shadow: 1px 1px 1px #062F4F;
+}
+
+a.about-buttons {
+	display: inline-block;
+	margin: 0;
+	width: 45%;
+	max-width: 350px;
+}
+
+div.resume-div a {
+	color: #5F7FA1;
+	font-weight: bold;
+}
+
+div.resume-div a:hover {
+	color: #5F7FA1;
+}
+
+div.intro a.visit-website {
+	display: block;
+	margin: 0 auto 35px;
+}
+
+div.view-portfolio a.visit-website {
+	margin-bottom: 0;
+}
+
+footer .footer-text a {
+	display: block;
+	margin-bottom: 5px;
+}
+
+div.about-buttons-div {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+div.intro .resume-button {
+	position: absolute;
+	right: 0;
+}
+
+div.resume-padding {
+	padding-bottom: 40px;
+	margin-top: 40px;
+}
+
+a.biggest-screen {
+	display: none;
+}
+
+div.skills-row i {
+	margin-top: 20px;
+	color: #5882A3;
+	text-shadow: 1px 1px 1px #000;
+}
+
+i.about-socmed {
+	margin: 20px 10px;
+	color: #000;
+}
+
+div.work-row img {
+	box-shadow: 1px 1px 5px #062F4F;
+}
+
+div.project-container img {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	box-shadow: 1px 1px 5px #000;
+}
+
+div.project-container img:active {
+	box-shadow: 1px 1px 1px #000;
+}
+
+div.view-portfolio {
+	margin-top: 50px;
+	padding-bottom: 50px;
+}
+
+hr {
+	margin-bottom: 40px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.resume-div ul {
+	list-style-type: disc;
+	padding-left: 35px;
+}
+
+.resume-div ul li {
+	font-size: 18px;
+}
+
+li, label, input.text-input, textarea {
+	width: 100%;
+	margin-top: 2px;
+	font-family: Quicksand, sans-serif !important;
+}
+
+input.text-input {
+	height: 40px;
+	border: 1px solid grey;
+}
+
+input.text-input, textarea {
+	padding-left: 10px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid grey;
+	resize: none;
+}
+
+textarea {
+	height: 100px;
+}
+
+input.radio {
+	text-align: left;
+	margin-left: 0;
+	display: inline-block;
+}
+
+label.radio-label {
+	display: inline-block;
+	width: 25px;
+}
+
+.submit {
+	display: block;
+	padding: 10px 0px;
+	margin: 30px auto;
+	width: 100%;
+	max-width: 300px;
+	border-radius: 10px;
+	background-color: #5882A3;
+	color: #FFF;
+	box-shadow: 2px 2px 2px #062F4F;
+	border: none;
+}
+
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+footer {
+	background-color: #000;
+	color: #FFF;
+	padding: 20px 10px;
+}
+
+footer p {
+	line-height: 14px;
+	font-size: 16px;
+}
+
+footer a {
+	color: #FFF;
+	margin: 0 10px;
+}
+
+@media screen and (min-width: 576px) {
+	h2.homepage-about {
+		display: none;
+	}
+
+	.big-screen {
+		display: block;
+	}
+
+	p.intro-text {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 575px) {
+	div.banner h1.homepage {
+		display: block;
+	}
+
+	a.small-screen-banner-buttons {
+		display: none !important;
+	}
+	
+	div.banner div.banner-buttons-div a.banner-button-big {
+		left: 6%;
+		margin: 0;
+	}
+
+	div.banner div.banner-buttons-div a.banner-resume-big {
+		left: 53%;
+	}
+
+	div.banner-buttons-div {
+		display: block;
+		top: 50px;
+	}
+
+	div.intro a.visit-website {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 650px) {
+	div.intro h2 {
+		margin-top: 12%;
+	}
+
+	p.intro-text {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	small-screen {
+		margin-top: 12%;
+	}
+
+	p.intro-text {
+		font-size: 18px;
+	}
+}
+
+
+@media screen and (min-width: 850px) {
+	div.intro a.visit-website {
+		display: block;
+		margin-top: 35px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	div.work-row img {
+		margin-top: 26px;
+	}
+}

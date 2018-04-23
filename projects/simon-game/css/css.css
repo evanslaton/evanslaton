@@ -1,0 +1,343 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(http://www.kartusdestek.com/wp-content/uploads/2017/12/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	margin-top: 20px;
+	text-align: center;
+	padding: 30px;
+	font-size: 42px;
+	background-color: white;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	text-shadow: 1px 1px 2px grey;
+	min-width: 270px;
+}
+
+.green {
+	color: #0FA94C;
+}
+
+.red {
+	color: #9A1922;
+}
+
+.yellow {
+	color: #C5AA1E;
+}
+
+.blue {
+	color: #2A458D;
+}
+
+.container {
+	max-width: 500px;
+	min-width: 270px;
+	width: 80%;
+	margin: 80px auto;
+	border: 20px solid black;
+	border-radius: 100%;
+	position: relative;
+}
+
+.container:after {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.top-left {
+    width: 50%; 
+    height: 50%; 
+    border-bottom: 1px solid #000; 
+    background-color: #0FA94C;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+.top-right {
+    width: 50%; 
+    height: 50%; 
+    border-bottom: 1px solid #000; 
+    background-color: #9A1922;
+    border-radius: 0 100% 0 0;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+
+.bottom-right {
+    width: 50%; 
+    height: 50%; 
+    border-bottom: 1px solid #000; 
+    background-color: #2A458D;
+    border-radius: 0 0 100% 0;
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+}
+
+.bottom-left {
+    width: 50%; 
+    height: 50%; 
+    border-bottom: 1px solid #000; 
+    background-color: #C5AA1E;
+    border-radius: 0 0 0 100%;
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+}
+
+.play-buttons:hover {
+	cursor: pointer;
+}
+
+.criss {
+	height: 102%;
+	width: 20px;
+	background-color: black;
+	position: absolute;
+	top: -1px;
+	left: 48.2%;
+}
+
+.cross {
+	height: 20px;
+	width: 102%;
+	background-color: black;
+	position: absolute;
+	top: 48.2%;
+	left: -1px;
+}
+
+.console {
+	width: 55%;
+	height: 55%;
+	border-radius: 100%;
+	border: 15px solid #000;
+	background-color: #ECE6ED;
+	position: absolute;
+	top: 19%;
+	left: 19%;
+	text-align: center;
+}
+
+.signature {
+	text-align: center;
+	margin-top: 15%;
+	margin-bottom: 0;
+}
+
+h2 {
+	text-align: center;
+	font-size: 40px;
+	font-family: Audiowide, serif;
+	margin-top: -5px;
+}
+
+.button-align {
+	margin-top: 8px;
+	position: relative;
+}
+
+.display {
+	width: 86px;
+	height: 86px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	background-color: black;
+	position: absolute;
+	left: 19%;
+}
+
+.score {
+	color: red;
+	margin-top: 23%;
+	font-size: 42px;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.buttons {
+	display: inline-block;
+	width: 25%;
+	position: absolute;
+	right: 19%;
+}
+
+.buttons p {
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	box-shadow: .5px .5px .5px grey;
+}
+
+.buttons p:hover {
+	cursor: pointer;
+}
+
+.buttons p:active {
+		box-shadow: none;
+}
+
+.strict {
+	color: white;
+}
+
+.on {
+	background-color: #03180B;
+}
+
+.off {
+	background-color: #9A1922;
+}
+
+@media screen and (max-width: 562px) {
+	.display {
+		width: 74px;
+		height: 74px;
+	}
+
+	.score {
+		margin-top: 20%;
+		font-size: 36px;
+	}
+
+	.buttons p {
+		padding: 3px;
+	}
+}
+
+@media screen and (max-width: 528px) {
+	.display {
+		width: 68px;
+		height: 68px;
+		left: 20%;
+	}
+
+	.score {
+		margin-top: 28%;
+		font-size: 26px;
+	}
+
+	.buttons {
+		right: 20%;
+	}
+
+	.buttons p {
+		padding: 2px;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.container {
+		border-width: 10px;
+	}
+
+	.criss {
+		width: 8px;
+		left: 49.5%;
+	}
+
+	.cross {
+		height: 8px;
+		top: 49.5%;
+	}
+
+	.console {
+		border-width: 5px;
+		width: 60%;
+		height: 60%;
+	}
+
+	.display {
+		width: 62px;
+		height: 62px;
+		left: 20%;
+	}
+
+	.score {
+		margin-top: 24%;
+		font-size: 26px;
+	}
+
+	.buttons {
+		right: 20%;
+	}
+
+	.buttons p {
+		padding: 1px;
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.button-align {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.display {
+		width: 62px;
+		height: 62px;
+		left: 18%;
+	}
+
+	.buttons {
+		right: 18%;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.signature {
+		margin-top: 10%;
+	}
+}
+
+@media screen and (max-width: 355px) {
+	.signature {
+		margin-top: 13%;
+	}
+
+	h2 {
+		margin-top: -8px;
+		font-size: 36px;
+	}
+
+	.display {
+		width: 54px;
+		height: 54px;
+		left: 18%;
+	}
+
+	.score {
+		margin-top: 20%;
+	}
+
+	.buttons p {
+		font-size: 10px;
+	}
+}

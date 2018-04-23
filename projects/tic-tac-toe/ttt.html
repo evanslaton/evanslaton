@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Galdeano" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/css.css">
+  <script src="js/js.js"></script>
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+  <p class="signature">Coded by Evan Slaton</p>
+
+  <div class="players">
+    <p id="player-one" class="player-one visible-border hidden">Player 1 = <span id="player-one_icon"></span></p>
+    <p id="player-two" class="player-two hidden">Player 2 = <span id="player-two_icon"></span></p>
+  </div>
+
+  <div class="container">
+    <div id="menu" class="menu">
+      <div class="menu-question">
+        <p>How Many Players?</p>
+        <p id="option-one" class="inline option-one">One</p>
+        <p id="option-two" class="inline option-two">Two</p>
+      </div>
+      <div class="menu-question-two">
+        <p>Player One, X or O?</p>
+        <p id="option-three" class="inline option-three">X</p>
+        <p id="option-four" class="inline option-four">O</p>
+      </div>
+      <p id="play-button" class="play-button">Play</p>
+    </div>
+
+    <div id="winnerIs" class="winner-is hidden">
+      <p id ="winText" class="winner-declaration"></p>
+    </div>
+
+    <div id="game" class="hidden">
+      <div class="horizontal-line"></div>
+      <div class="horizontal-line horizontal-line-two"></div>
+
+      <div class="vertical-line"></div>
+      <div class="vertical-line vertical-line-two"></div>
+
+      <div id="0" class="box"><img src="" /></div>
+      <div id="1" class="box"><img src="" /></div>
+      <div id="2" class="box"><img src="" /></div>
+      <div id="3" class="box"><img src="" /></div>
+      <div id="4" class="box"><img src="" /></div>
+      <div id="5" class="box"><img src="" /></div>
+      <div id="6" class="box"><img src="" /></div>
+      <div id="7" class="box"><img src="" /></div>
+      <div id="8" class="box"><img src="" /></div>
+    </div>
+  </div>
+</body>
+</html>

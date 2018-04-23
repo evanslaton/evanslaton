@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Quote Me</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="quotes">
+			<h1>Swanson says&#58;</h1>
+			<p>"<span id="swansonisms">...</span>"</p>
+		<div>
+
+		<button onclick="newQuote()">Swanson says&#58;</button>
+
+	</div>
+
+<script>
+
+	var quotes = ["Any dog under fifty pounds is a cat and cats are useless.", "Never half-ass two things. Whole-ass one thing.", "Clear alcohols are for rich women on diets.", "There’s only one thing I hate more than lying: skim milk. Which is water that’s lying about being milk.", "Dear frozen yogurt, you are the celery of desserts. Be ice cream or be nothing.", "Crying: Acceptable at funerals and the Grand Canyon.", "Fishing is for sport only. Fish meat is practically a vegetable.", "Give a man a fish and you feed him for a day. Don’t teach a man how to fish and you feed yourself. He’s a grown man. Fishing isn’t that hard.", "I enjoy government functions like I enjoy getting kicked in the nuggets with a steel-toed boot. But this hotel always serves bacon-wrapped shrimp. That's my number-one favorite food wrapped around my number-three favorite food. I'd go to a banquet in honor of those Somali pirates if they served bacon-wrapped shrimp.", "There has never been a sadness that can’t be cured by breakfast food.", "Just give me all the bacon and eggs you have. Wait, wait. I'm worried what you just heard was, 'Give me a lot of bacon and eggs.' What I said was, 'Give me all the bacon and eggs you have.' Do you understand?", "Don’t start chasing applause and acclaim. That way lies madness.", "I can’t go because I don’t want to.", "When people get a little too chummy with me, I like to call them by the wrong name to let them know I don’t really care about them.", "History began of July 4, 1776. Everything before that was a mistake.", "I like saying no. It lowers their enthusiasm.", "If you need anything at all… too bad. Deal with your problems yourself like adults.", "I’d wish you the best of luck but I believe luck is a concept created by the weak to explain their failures.", "Well, I am not usually one for speeches. So, goodbye.", "I have been forced to do many things I don’t enjoy. Like write things down and speak with people.", "Keep your tears in your eyes where they belong.", "I don’t want to seem overdramatic but I don’t really care what happens here.", "I hate the public. The public is stupid.", "Son, there is no wrong way to consume alcohol.", "I got my first job when I was nine. Worked at a sheet metal factory. In two weeks I was running the floor. Child labor laws are ruining this country.", "Metaphors? I hate metaphors. That’s why my favorite book is Moby Dick. No froo-froo symbolism, just a good tale about a man who hates an animal.", "People are idiots.", "Friends: one to three is sufficient.", "It may be cold outside but it’s about to get all warm up in my jazz.", "Goodbye Duke Silver. May your rest… in jazz.", "The less I know about other people’s affairs, the happier I am. I’m not interested in caring about people."];
+
+	function getRandomQuote() {
+	//Selects a random quotes
+		return quotes[Math.floor(Math.random()*(30-0+1)+0)];
+	}
+
+	function newQuote() {
+	//Changes the paragraph text
+		document.getElementById('swansonisms').innerHTML = getRandomQuote();
+	}
+	
+</script>
+
+</body>
